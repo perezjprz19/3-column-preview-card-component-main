@@ -1,97 +1,146 @@
 :root {
-
   /*########################################################################
                                                           GLOBAL STYLES
   ########################################################################*/
-
   /* Primary Colors*/
   --bright-orange: hsl(31, 77%, 52%);
   --dark-cyan: hsl(184, 100%, 22%);
   --very-dark-cyan: hsl(179, 100%, 13%);
-
   /* Neutral Colors*/
-
   /*paragraphs*/
---transparent-white:  hsla(0, 0%, 100%, 0.75);
-
-/*background, headings, buttons*/
---very-light-gray: hsl(0, 0%, 95%);
-
---heading-font: 'Big Shoulders Display', cursive;
---paragraph-font: 'Lexend Deca', sans-serif;
-
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  /*background, headings, buttons*/
+  --very-light-gray: hsl(0, 0%, 95%);
+  --heading-font: 'Big Shoulders Display', cursive;
+  --paragraph-font: 'Lexend Deca', sans-serif;
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+/*########################################################################
+                                                      MOBILE VIEW
+########################################################################*/
 
-main {
+.vehicle__container {
   display: grid;
   grid-template-rows: 3fr;
   margin: 0.5em;
 }
 
 section {
-  display:flex;
+  display: flex;
   flex-direction: column;
-  padding: 2em;
+  padding: 3em;
 }
 
-.sedans {
+.vehicle__container--sedans {
   background-color: var(--bright-orange);
+  border-radius: 7px 7px 0 0;
 }
 
-.sedans::before {
+.vehicle__container--sedans::before {
   content: url('images/icon-sedans.svg');
 }
 
-.suvs {
+.vehicle__container--sedans>button {
+  color: var(--bright-orange);
+}
+
+.vehicle__container--suvs {
   background-color: var(--dark-cyan);
 }
 
-.suvs::before {
+.vehicle__container--suvs::before {
   content: url('images/icon-suvs.svg');
 }
 
-.luxury {
-background-color: var(--very-dark-cyan);
+.vehicle__container--suvs>button {
+  color: var(--dark-cyan);
 }
 
-.luxury::before {
+.vehicle__container--luxury {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 0 7px 7px;
+}
+
+.vehicle__container--luxury::before {
   content: url('images/icon-luxury.svg');
+}
+
+.vehicle__container--luxury>button {
+  color: var(--very-dark-cyan);
 }
 
 h2 {
   font-family: var(--heading-font);
   color: var(--very-light-gray);
   text-transform: uppercase;
+  font-size: 2em;
 }
 
 p {
   color: var(--transparent-white);
+  line-height: 1.5em;
+  font-family: var(--paragraph-font);
+  margin-top: 0;
 }
 
 button {
   background-color: var(--very-light-gray);
   cursor: pointer;
   border: none;
-
-  max-width: 45%;
+  margin-top: 1em;
+  max-width: 10em;
   padding: 1em;
   border-radius: 20px;
+  font-family: var(--paragraph-font);
 }
 
-button:last-child{
-  color: var(--bright-orange);
+button:hover,
+button:active {
+  background-color: transparent;
+  color: var(--transparent-white);
+  outline: 2px solid var(--transparent-white);
 }
+
 .attribution {
-  font-size: 11px; text-align: center;
+  font-size: 1em;
+  text-align: center;
 }
+
 .attribution a {
-   color: hsl(228, 45%, 44%);
+  color: hsl(228, 45%, 44%);
+}
+
+/*########################################################################
+                                                        MEDIA QUERIES - DESKTOP
+########################################################################*/
+@media only screen and (min-width: 57em) {
+  .vehicle__container {
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 67vw;
+  }
+
+  .vehicle__container--sedans {
+    grid-column: 1/2;
+    border-radius: 7px 0 0 7px;
+  }
+
+  .vehicle__container--suvs {
+    grid-column: 2/3;
+  }
+
+  .vehicle__container--luxury {
+    grid-column: 3/4;
+    border-radius: 0 7px 7px 0;
+  }
+
+  p {
+    margin-bottom: 4em;
+  }
 }
