@@ -1,0 +1,97 @@
+:root {
+
+  /*########################################################################
+                                                          GLOBAL STYLES
+  ########################################################################*/
+
+  /* Primary Colors*/
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* Neutral Colors*/
+
+  /*paragraphs*/
+--transparent-white:  hsla(0, 0%, 100%, 0.75);
+
+/*background, headings, buttons*/
+--very-light-gray: hsl(0, 0%, 95%);
+
+--heading-font: 'Big Shoulders Display', cursive;
+--paragraph-font: 'Lexend Deca', sans-serif;
+
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: grid;
+  grid-template-rows: 3fr;
+  margin: 0.5em;
+}
+
+section {
+  display:flex;
+  flex-direction: column;
+  padding: 2em;
+}
+
+.sedans {
+  background-color: var(--bright-orange);
+}
+
+.sedans::before {
+  content: url('images/icon-sedans.svg');
+}
+
+.suvs {
+  background-color: var(--dark-cyan);
+}
+
+.suvs::before {
+  content: url('images/icon-suvs.svg');
+}
+
+.luxury {
+background-color: var(--very-dark-cyan);
+}
+
+.luxury::before {
+  content: url('images/icon-luxury.svg');
+}
+
+h2 {
+  font-family: var(--heading-font);
+  color: var(--very-light-gray);
+  text-transform: uppercase;
+}
+
+p {
+  color: var(--transparent-white);
+}
+
+button {
+  background-color: var(--very-light-gray);
+  cursor: pointer;
+  border: none;
+
+  max-width: 45%;
+  padding: 1em;
+  border-radius: 20px;
+}
+
+button:last-child{
+  color: var(--bright-orange);
+}
+.attribution {
+  font-size: 11px; text-align: center;
+}
+.attribution a {
+   color: hsl(228, 45%, 44%);
+}
