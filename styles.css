@@ -129,11 +129,10 @@ button:active {
 /*########################################################################
                                                         MEDIA QUERIES - DESKTOP
 ########################################################################*/
-@media only screen and (min-width: 56em) {
+@media only screen and (min-width: 50em) {
   .vehicle__container {
     grid-template-columns: 1fr 1fr 1fr;
-    width: min(67vw, 1000px);
-    transition: 0.5s linear;
+    max-width: 60em;
   }
 
   .vehicle__container--sedans {
