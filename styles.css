@@ -29,8 +29,9 @@ main {
   display:flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2em;
 }
+
+
 
 /*########################################################################
                                                       MOBILE VIEW
@@ -133,6 +134,7 @@ button:active {
   .vehicle__container {
     grid-template-columns: 1fr 1fr 1fr;
     max-width: 60em;
+    height: 30em;
   }
 
   .vehicle__container--sedans {
@@ -149,7 +151,7 @@ button:active {
     border-radius: 0 7px 7px 0;
   }
 
-  p {
-    margin-bottom: 4em;
-  }
+button {
+  margin-top: auto;
+}
 }
