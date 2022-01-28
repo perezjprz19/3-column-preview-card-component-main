@@ -23,22 +23,22 @@ body {
   align-items: center;
   background-color: var(--very-light-gray);
 }
-/*########################################################################
-                                                      MOBILE VIEW
-########################################################################*/
 
-.vehicle__container {
-  display: grid;
-  grid-template-rows: 3fr;
-  margin: 0.5em;
-
-}
 
 main {
   display:flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 2em;
+}
+
+/*########################################################################
+                                                      MOBILE VIEW
+########################################################################*/
+.vehicle__container {
+  display: grid;
+  grid-template-rows: 3fr;
+  margin: 0.5em;
 }
 
 section {
