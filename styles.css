@@ -30,6 +30,7 @@ body {
   display: grid;
   grid-template-rows: 3fr;
   margin: 0.5em;
+
 }
 
 section {
@@ -120,10 +121,11 @@ button:active {
 /*########################################################################
                                                         MEDIA QUERIES - DESKTOP
 ########################################################################*/
-@media only screen and (min-width: 57em) {
+@media only screen and (min-width: 56em) {
   .vehicle__container {
     grid-template-columns: 1fr 1fr 1fr;
-    max-width: 67vw;
+    width: min(67vw, 1000px);
+    transition: 0.5s linear;
   }
 
   .vehicle__container--sedans {
