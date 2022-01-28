@@ -21,6 +21,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: var(--very-light-gray);
 }
 /*########################################################################
                                                       MOBILE VIEW
@@ -31,6 +32,13 @@ body {
   grid-template-rows: 3fr;
   margin: 0.5em;
 
+}
+
+main {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
 }
 
 section {
