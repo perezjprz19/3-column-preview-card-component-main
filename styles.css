@@ -85,7 +85,7 @@ section {
   color: var(--very-dark-cyan);
 }
 
-h2 {
+h1, h2 {
   font-family: var(--heading-font);
   color: var(--very-light-gray);
   text-transform: uppercase;
